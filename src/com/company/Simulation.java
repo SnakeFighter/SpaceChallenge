@@ -45,9 +45,6 @@ public class Simulation {
         out.println("U1 fleet size: " + U1fleet.size());
 
         itemList = loadItems(2);
-        for (Item thisItem : itemList) {
-            out.println(thisItem.getName());
-        }
         U2fleet = loadU2(itemList);
         out.println("U2 fleet size: " + U2fleet.size());
 
