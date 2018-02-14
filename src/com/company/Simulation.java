@@ -45,6 +45,9 @@ public class Simulation {
         out.println("U1 fleet size: " + U1fleet.size());
 
         itemList = loadItems(2);
+        for (Item thisItem : itemList) {
+            out.println(thisItem.getName());
+        }
         U2fleet = loadU2(itemList);
         out.println("U2 fleet size: " + U2fleet.size());
 
@@ -108,7 +111,7 @@ public class Simulation {
 
         //Can be phase 1 or 2, choose the file accordingly:
         String fileName = "";
-        assert (phase==1 || phase==2);
+        //assert (phase==1 || phase==2);
         switch (phase) {
             case 1:
                 fileName = "phase-1.txt";
@@ -121,8 +124,8 @@ public class Simulation {
 
         //Open the file.
         ArrayList <Item> itemList = new ArrayList();
-        File phase1 = new File("phase-1.txt");
-        Scanner fileScanner = new Scanner (phase1);
+        File cargoFile = new File(fileName);
+        Scanner fileScanner = new Scanner (cargoFile);
 
         //Read items, and add to array.
 
